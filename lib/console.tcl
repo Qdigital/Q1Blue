@@ -88,6 +88,8 @@ method _init {} {
 	bind_button3 $w_t "tk_popup $w.ctxm %X %Y"
 	bind $w_t <$M1B-Key-a> "$w_t tag add sel 0.0 end;break"
 	bind $w_t <$M1B-Key-A> "$w_t tag add sel 0.0 end;break"
+	bind $w <$M1B-Key-w> "destroy $w;break"
+	bind $w <$M1B-Key-W> "destroy $w;break"
 }
 
 method exec {cmd {after {}}} {
